@@ -1,26 +1,125 @@
-.carousel-inner{
-    max-height: 39rem;
+/*===============Propiedades Globales================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
+
+.carousel-inner {
+  max-height: 39rem;
+}
+/*===================SECCION NUESTRO EQUIPO MAPA==========================*/
+#local {
+  margin-top: 50px;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 400px;
+}
+/*===========================SECCION EQUIPO MIAMI==================================*/
+#numeros-local {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#numeros-local div {
+  padding: 0 20px 0 0;
+  text-align: left;
+  height: 48px;
+}
+
+#numeros-local div:not(:last-child) {
+  border-right: 2px solid #3f3f3f;
+}
+#numeros-local div:not(:first-child) {
+  padding-left: 20px;
+}
+
+#numeros-local p {
+  margin: 0;
+}
+
+.mapa {
+  background: url(../img/mapa.png);
+  width: 2600px;
+  height: 465px;
+}
+
+.wrapper-local {
+  width: 50%;
+  margin-left: 150px;
+  padding-top: 5px;
+}
+
 /*-- whathsApp---*/
 img.btn-whatsapp {
-    display: block !important;
-    position: fixed;
-    z-index: 9999999;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    border-radius: 100px !important;
-  }
-  img.btn-whatsapp:hover {
-    border-radius: 100px !important;
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(7, 94, 84, 1);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(7, 94, 84, 1);
-    box-shadow: 0px 0px 15px 0px rgba(7, 94, 84, 1);
-    transition-duration: 1s;
+  display: block !important;
+  position: fixed;
+  z-index: 9999999;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  border-radius: 100px !important;
+}
+img.btn-whatsapp:hover {
+  border-radius: 100px !important;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(7, 94, 84, 1);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(7, 94, 84, 1);
+  box-shadow: 0px 0px 15px 0px rgba(7, 94, 84, 1);
+  transition-duration: 1s;
 }
 /*-- responsiva 768px---*/
-@media (max-width:768px) {
-    #intro {
-        width: 90% !important;
-    }
+@media (max-width: 768px) {
+  #intro {
+    width: 90% !important;
+  }
+}
+/*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
+
+@media (max-width: 1200px) {
+  #intro,
+  #equipo {
+    width: 90% !important;
+    margin: auto;
+  }
+
+  #local {
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+  .wrapper-local {
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+  }
+}
+/*=========================MEDIA QUERIES PANTALLA SM================================*/
+
+@media (max-width: 768px) {
+  #intro,
+  #equipo {
+    width: 90% !important;
+    margin: auto;
+  }
+
+  #img-equipo {
+    max-height: 20rem !important;
+    width: 90%;
+  }
+  .wrapper-local {
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+  }
+  #local {
+    flex-wrap: wrap;
+  }
+  .mapa img {
+    width: 100%;
+    height: auto;
+  }
+  #bg-contactos {
+    top: -120px;
+  }
 }
